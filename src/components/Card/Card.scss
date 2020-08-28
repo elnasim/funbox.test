@@ -1,16 +1,28 @@
 $border-radius: 12px;
-$clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
+$clip-path: polygon(13% 0, 100% 0, 100% 100%, 0 100%, 0 8%);
 
 .card-col {
   width: 33.33%;
   padding: 0 40px;
+  margin-bottom: 50px;
+
+  @media (max-width: 1199px) {
+    width: 50%;
+    padding: 0 20px;
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+    padding: 0 15px;
+  }
 }
 
 .card {
   background-color: #0099dc;
   padding: 4px;
   height: 480px;
-  margin-bottom: 14px;
+  margin: 0 auto 14px;
+  max-width: 320px;
   clip-path: $clip-path;
   border-radius: $border-radius;
 
@@ -18,33 +30,32 @@ $clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
     background-color: #f2f2f2;
     position: relative;
     background-image: url("/cat.png");
-    background-position: -18px 236px;
-    background-size: 110%;
+    background-position: -29px 201px;
+    background-size: 120%;
     background-repeat: no-repeat;
     height: 100%;
     clip-path: $clip-path;
-    padding: 20px 44px 20px 44px;
-    border-radius: 10px;
+    padding: 18px 44px 18px 44px;
+    border-radius: $border-radius;
   }
 
   &__toptext {
     font-size: 16px;
     color: #666666;
-    margin-bottom: 14px;
+    margin-bottom: 6px;
   }
 
   &__title {
     font-size: 48px;
     font-weight: bold;
     color: #000000;
-    margin-bottom: 4px;
   }
 
   &__subtitle {
     font-size: 24px;
     color: #000000;
     font-weight: bold;
-    margin-bottom: 22px;
+    margin-bottom: 12px;
   }
 
   &__thin-text {
