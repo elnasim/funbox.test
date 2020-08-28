@@ -1,0 +1,91 @@
+$border-radius: 12px;
+$clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
+
+.card-col {
+  width: 33.33%;
+  padding: 0 40px;
+}
+
+.card {
+  background-color: #0099dc;
+  padding: 4px;
+  height: 480px;
+  margin-bottom: 14px;
+  clip-path: $clip-path;
+  border-radius: $border-radius;
+
+  &__inner {
+    background-color: #f2f2f2;
+    position: relative;
+    background-image: url("/cat.png");
+    background-position: -18px 236px;
+    background-size: 110%;
+    background-repeat: no-repeat;
+    height: 100%;
+    clip-path: $clip-path;
+    padding: 20px 44px 20px 44px;
+    border-radius: 10px;
+  }
+
+  &__toptext {
+    font-size: 16px;
+    color: #666666;
+    margin-bottom: 14px;
+  }
+
+  &__title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 4px;
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 22px;
+  }
+
+  &__thin-text {
+    color: #666666;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+.round-card {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background-color: #0099dc;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+
+  &__num {
+    font-size: 40px;
+    line-height: 0.8;
+  }
+
+  &__text {
+    font-size: 20px;
+  }
+}
+
+.card-botline {
+  font-size: 13px;
+  color: #ffffff;
+  text-align: center;
+  a {
+    color: #1698d9;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+  }
+}
