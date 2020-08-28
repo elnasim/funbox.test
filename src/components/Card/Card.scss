@@ -25,6 +25,41 @@ $clip-path: polygon(13% 0, 100% 0, 100% 100%, 0 100%, 0 8%);
   max-width: 320px;
   clip-path: $clip-path;
   border-radius: $border-radius;
+  display: block;
+
+  &.selected {
+    background-color: #d91667;
+
+    .round-card {
+      background-color: #d91667;
+    }
+  }
+
+  &.disabled {
+    pointer-events: none;
+    user-select: none;
+    background-color: #b3b3b3;
+
+    .card__inner {
+      opacity: 0.5;
+    }
+
+    .card__toptext {
+      color: b3b3b3;
+    }
+
+    .card__title {
+      color: b3b3b3;
+    }
+
+    .card__subtitle {
+      color: b3b3b3;
+    }
+
+    .card__thin-text {
+      color: b3b3b3;
+    }
+  }
 
   &__inner {
     background-color: #f2f2f2;
