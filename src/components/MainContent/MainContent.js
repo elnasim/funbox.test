@@ -3,16 +3,18 @@ import "./MainContent.scss";
 import Card from "../Card/Card";
 
 export default function MainContent() {
-  const [data, setData] = useState([
+  const [data] = useState([
     {
       id: 1,
-      topline: "Сказочное заморское яство",
+      topline: {
+        default: "Сказочное заморское яство",
+        selectedHover: "Котэ не одобряет?",
+      },
       title: "Нямушка",
       subtitle: "с фуа-гра",
       subtext: ["10 порций", "мышь в подарок"],
       weight: "0,5",
       cardBottomText: {
-        default: 'Чего сидишь? Порадуй котэ, <a href="#">купи</a>',
         selected: "Печень утки разварная с артишоками.",
         notAvalible: "Печалька, с фуа-гра закончился.",
       },
@@ -20,29 +22,33 @@ export default function MainContent() {
     },
     {
       id: 2,
-      topline: "Сказочное заморское яство",
+      topline: {
+        default: "Сказочное заморское яство",
+        selectedHover: "Котэ не одобряет?",
+      },
       title: "Нямушка",
       subtitle: "с рыбой",
       subtext: ["40 порций", "2 мыши в подарок"],
       weight: 2,
       cardBottomText: {
-        default: 'Чего сидишь? Порадуй котэ, <a href="#">купи</a>',
-        selected: "Печень утки разварная с артишоками.",
-        notAvalible: "Печалька, с фуа-гра закончился.",
+        selected: "Головы щучьи с чесноком да свежайшая сёмгушка.",
+        notAvalible: "Печалька, с рыбой закончился.",
       },
       available: true,
     },
     {
       id: 3,
-      topline: "Сказочное заморское яство",
+      topline: {
+        default: "Сказочное заморское яство",
+        selectedHover: "Котэ не одобряет?",
+      },
       title: "Нямушка",
       subtitle: "с курой",
       subtext: ["100 порций", "5 мышей в подарок", "заказчик доволен"],
       weight: 5,
       cardBottomText: {
-        default: 'Чего сидишь? Порадуй котэ, <a href="#">купи</a>',
-        selected: "Печень утки разварная с артишоками.",
-        notAvalible: "Печалька, с фуа-гра закончился.",
+        selected: "Филе из цыплят с трюфелями в бульоне.",
+        notAvalible: "Печалька, с курой закончился.",
       },
       available: false,
     },

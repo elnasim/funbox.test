@@ -26,12 +26,29 @@ $clip-path: polygon(13% 0, 100% 0, 100% 100%, 0 100%, 0 8%);
   clip-path: $clip-path;
   border-radius: $border-radius;
   display: block;
+  transition: 0.25s;
+
+  &:hover {
+    .round-card {
+      background-color: #2ea8e6;
+    }
+
+    background-color: #2ea8e6;
+  }
 
   &.selected {
     background-color: #d91667;
 
     .round-card {
       background-color: #d91667;
+    }
+
+    &:hover {
+      .round-card {
+        background-color: #e52e7a;
+      }
+
+      background-color: #e52e7a;
     }
   }
 
@@ -45,19 +62,23 @@ $clip-path: polygon(13% 0, 100% 0, 100% 100%, 0 100%, 0 8%);
     }
 
     .card__toptext {
-      color: b3b3b3;
+      color: #b3b3b3;
     }
 
     .card__title {
-      color: b3b3b3;
+      color: #b3b3b3;
     }
 
     .card__subtitle {
-      color: b3b3b3;
+      color: #b3b3b3;
     }
 
     .card__thin-text {
-      color: b3b3b3;
+      color: #b3b3b3;
+    }
+
+    .round-card {
+      background-color: #b3b3b3;
     }
   }
 
@@ -114,6 +135,7 @@ $clip-path: polygon(13% 0, 100% 0, 100% 100%, 0 100%, 0 8%);
   justify-content: center;
   text-align: center;
   color: #ffffff;
+  transition: 0.25s;
 
   &__num {
     font-size: 40px;
