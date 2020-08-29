@@ -1,6 +1,11 @@
 $border-radius: 12px;
 $clip-path: polygon(13% 0, 100% 0, 100% 100%, 0 100%, 0 8%);
 
+$color-blue: #0099dc;
+$color-blue-light: #2ea8e6;
+$color-pink: #d91667;
+$color-pink-light: #e52e7a;
+
 .card-col {
   width: 33.33%;
   padding: 0 40px;
@@ -18,7 +23,7 @@ $clip-path: polygon(13% 0, 100% 0, 100% 100%, 0 100%, 0 8%);
 }
 
 .card {
-  background-color: #0099dc;
+  background-color: $color-blue;
   padding: 4px;
   height: 480px;
   margin: 0 auto 14px;
@@ -31,50 +36,50 @@ $clip-path: polygon(13% 0, 100% 0, 100% 100%, 0 100%, 0 8%);
   &.donthover {
     &:hover {
       .round-card {
-        background-color: #0099dc;
+        background-color: $color-blue;
       }
 
-      background-color: #0099dc;
+      background-color: $color-blue;
     }
 
     &.selected {
-      background-color: #d91667;
+      background-color: $color-pink;
 
       .round-card {
-        background-color: #d91667;
+        background-color: $color-pink;
       }
 
       &:hover {
         .round-card {
-          background-color: #d91667;
+          background-color: $color-pink;
         }
 
-        background-color: #d91667;
+        background-color: $color-pink;
       }
     }
   }
 
   &:hover {
     .round-card {
-      background-color: #2ea8e6;
+      background-color: $color-blue-light;
     }
 
-    background-color: #2ea8e6;
+    background-color: $color-blue-light;
   }
 
   &.selected {
-    background-color: #d91667;
+    background-color: $color-pink;
 
     .round-card {
-      background-color: #d91667;
+      background-color: $color-pink;
     }
 
     &:hover {
       .round-card {
-        background-color: #e52e7a;
+        background-color: $color-pink-light;
       }
 
-      background-color: #e52e7a;
+      background-color: $color-pink-light;
     }
   }
 
@@ -151,7 +156,7 @@ $clip-path: polygon(13% 0, 100% 0, 100% 100%, 0 100%, 0 8%);
   position: absolute;
   bottom: 12px;
   right: 12px;
-  background-color: #0099dc;
+  background-color: $color-blue;
   width: 80px;
   height: 80px;
   border-radius: 100%;
@@ -177,9 +182,14 @@ $clip-path: polygon(13% 0, 100% 0, 100% 100%, 0 100%, 0 8%);
   font-size: 13px;
   color: #ffffff;
   text-align: center;
-  a {
-    color: #1698d9;
+  span {
+    color: $color-blue;
     text-decoration: underline;
     text-decoration-style: dashed;
+    cursor: pointer;
+  }
+
+  &--notavailible {
+    color: #ffff66;
   }
 }

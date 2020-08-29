@@ -3,26 +3,39 @@ import "./Card.scss";
 
 export default function Card({ data }) {
   const [isSelected, setIsSelected] = useState(false);
+  const [dontHover, setDontHover] = useState(false);
 
-  const selectHandler = (e) => {
-    e.preventDefault();
-    if (!data.available) return;
+  const selectHandler = () => {
     setIsSelected(!isSelected);
   };
 
-  let cardStyles = ["card"];
+  const selectHandlerCard = () => {
+    selectHandler();
+    setDontHover(true);
+  };
+
+  let cardClasses = ["card"];
 
   if (!data.available) {
-    cardStyles.push("disabled");
+    cardClasses.push("disabled");
   }
 
   if (isSelected) {
-    cardStyles.push("selected");
+    cardClasses.push("selected");
+  }
+
+  if (dontHover) {
+    cardClasses.push("donthover");
   }
 
   return (
     <div className="card-col">
-      <a href="#" className={cardStyles.join(" ")} onClick={selectHandler}>
+      <a
+        href="#"
+        className={cardClasses.join(" ")}
+        onClick={selectHandlerCard}
+        onMouseLeave={() => setDontHover(false)}
+      >
         <div className="card__inner">
           <div className="card__toptext">{data.topline.default}</div>
           <div className="card__title">{data.title}</div>
@@ -40,7 +53,7 @@ export default function Card({ data }) {
       </a>
 
       {!data.available && (
-        <div className="card-botline">{data.cardBottomText.notAvalible}</div>
+        <div className="card-botline card-botline--notavailible">{data.cardBottomText.notAvalible}</div>
       )}
 
       {data.available && isSelected && (
@@ -50,9 +63,9 @@ export default function Card({ data }) {
       {data.available && !isSelected && (
         <div className="card-botline">
           Чего сидишь? Порадуй котэ,{" "}
-          <a href="#" onClick={selectHandler}>
+          <span  onClick={selectHandler}>
             купи
-          </a>
+          </span>
         </div>
       )}
     </div>
