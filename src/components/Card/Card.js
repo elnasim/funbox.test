@@ -14,6 +14,10 @@ export default function Card({ data }) {
     setDontHover(true);
   };
 
+  const descText = (text) => {
+    return { __html: text };
+  };
+
   let cardClasses = ["card"];
 
   if (!data.available) {
@@ -41,9 +45,11 @@ export default function Card({ data }) {
           <div className="card__title">{data.title}</div>
           <div className="card__subtitle">{data.subtitle}</div>
           {data.subtext.map((item) => (
-            <div className="card__thin-text" key={item}>
-              {item}
-            </div>
+            <div
+              className="card__thin-text"
+              key={item}
+              dangerouslySetInnerHTML={descText(item)}
+            ></div>
           ))}
           <div className="round-card card__round">
             <div className="round-card__num">{data.weight}</div>
@@ -53,7 +59,9 @@ export default function Card({ data }) {
       </a>
 
       {!data.available && (
-        <div className="card-botline card-botline--notavailible">{data.cardBottomText.notAvalible}</div>
+        <div className="card-botline card-botline--notavailible">
+          {data.cardBottomText.notAvalible}
+        </div>
       )}
 
       {data.available && isSelected && (
@@ -62,10 +70,7 @@ export default function Card({ data }) {
 
       {data.available && !isSelected && (
         <div className="card-botline">
-          Чего сидишь? Порадуй котэ,{" "}
-          <span  onClick={selectHandler}>
-            купи
-          </span>
+          Чего сидишь? Порадуй котэ, <span onClick={selectHandler}>купи</span>
         </div>
       )}
     </div>

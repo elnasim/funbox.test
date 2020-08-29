@@ -12,7 +12,7 @@ export default function MainContent() {
       },
       title: "Нямушка",
       subtitle: "с фуа-гра",
-      subtext: ["10 порций", "мышь в подарок"],
+      subtext: ["<b>10</b> порций", "мышь в подарок"],
       weight: "0,5",
       cardBottomText: {
         selected: "Печень утки разварная с артишоками.",
@@ -28,7 +28,7 @@ export default function MainContent() {
       },
       title: "Нямушка",
       subtitle: "с рыбой",
-      subtext: ["40 порций", "2 мыши в подарок"],
+      subtext: ["<b>40</b> порций", "<b>2</b> мыши в подарок"],
       weight: 2,
       cardBottomText: {
         selected: "Головы щучьи с чесноком да свежайшая сёмгушка.",
@@ -44,7 +44,11 @@ export default function MainContent() {
       },
       title: "Нямушка",
       subtitle: "с курой",
-      subtext: ["100 порций", "5 мышей в подарок", "заказчик доволен"],
+      subtext: [
+        "<b>100</b> порций",
+        "<b>5</b> мышей в подарок",
+        "заказчик доволен",
+      ],
       weight: 5,
       cardBottomText: {
         selected: "Филе из цыплят с трюфелями в бульоне.",

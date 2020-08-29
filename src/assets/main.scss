@@ -1,3 +1,32 @@
+@font-face {
+  font-family: "Exo2.0";
+  src: url("/fonts/Exo2.0-Thin.otf");
+  font-weight: thin;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Trebuchet MS";
+  src: url("/fonts/TrebuchetMS-Bold.eot");
+  src: local("Trebuchet MS Bold"), local("TrebuchetMS-Bold"),
+    url("/fonts/TrebuchetMS-Bold.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/TrebuchetMS-Bold.woff") format("woff"),
+    url("/fonts/TrebuchetMS-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Trebuchet MS";
+  src: url("/fonts/TrebuchetMS.eot");
+  src: local("Trebuchet MS"), local("TrebuchetMS"),
+    url("/fonts/TrebuchetMS.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/TrebuchetMS.woff") format("woff"),
+    url("/fonts/TrebuchetMS.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 *,
 *::before,
 *::after {
@@ -8,7 +37,8 @@ body {
   padding: 0;
   margin: 0;
   font-size: 16px;
-  font-family: sans-serif;
+  font-family: "Trebuchet MS", sans-serif;
+  font-weight: normal;
   overflow-x: hidden;
 }
 
