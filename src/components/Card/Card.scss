@@ -28,6 +28,32 @@ $clip-path: polygon(13% 0, 100% 0, 100% 100%, 0 100%, 0 8%);
   display: block;
   transition: 0.25s;
 
+  &.donthover {
+    &:hover {
+      .round-card {
+        background-color: #0099dc;
+      }
+
+      background-color: #0099dc;
+    }
+
+    &.selected {
+      background-color: #d91667;
+
+      .round-card {
+        background-color: #d91667;
+      }
+
+      &:hover {
+        .round-card {
+          background-color: #d91667;
+        }
+
+        background-color: #d91667;
+      }
+    }
+  }
+
   &:hover {
     .round-card {
       background-color: #2ea8e6;
